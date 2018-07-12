@@ -1,0 +1,57 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "free code camp",
+      "types": [],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "RecentArticlesIntent",
+          "slots": [],
+          "samples": [
+            "hear about your most recent medium post",
+            "hear your most recent medium post",
+            "your most recent medium post",
+            "most recent medium post",
+            "the most recent medium post",
+            "medium posts"
+          ]
+        },
+        {
+          "name": "HelloIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "Hello my name is {name}",
+            "hi i'm {name}",
+            "{name}"
+          ]
+        },
+        {
+          "name": "LiveStreamsIntent",
+          "slots": [],
+          "samples": [
+            "streams",
+            "live streams",
+            "tell me the scheduled live streams"
+          ]
+        }
+      ]
+    }
+  }
+}
