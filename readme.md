@@ -2,7 +2,7 @@
 
 This repository contains source code and related assets for the Alexa development livestreams on the FreeCodeCamp YouTube channel from 7/9/2018 - 7/13/2018. 
 
-During the livestream, as our example, we're building an Alexa Skill for Free Code Camp. The skill will let users get general information about FreeCodeCamp, listen to current posts published on medium, and get answers to frequently asked questions.  
+During the [livestream](https://www.youtube.com/watch?v=Z60S9J7TCeU), as our example, we're building an Alexa Skill for Free Code Camp. The skill will let users get general information about FreeCodeCamp, listen to current posts published on medium, and get answers to frequently asked questions.  
 
 ### [Complete this form to BETA test the skill](https://docs.google.com/forms/d/e/1FAIpQLSeLYrXP9n4oal_xrwny34Ceq6MdeGlIQm8CXh2khhZYs5fzJA/viewform)
 
