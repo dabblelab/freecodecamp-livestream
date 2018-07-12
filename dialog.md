@@ -33,4 +33,5 @@ Alexa: The most recent article posted on Medium for Free Code Camp is titled: {t
  - let users listen to the podcast
  - provide quiz questions and coding trivia
  - let uses watch videos (echo show, spot, fire tablet)
+ - capture unanswered questions
 
