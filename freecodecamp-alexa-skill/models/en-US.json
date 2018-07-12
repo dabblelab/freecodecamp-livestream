@@ -2,7 +2,60 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "free code camp",
-      "types": [],
+      "types": [
+        {
+          "name": "questions",
+          "values": [
+            {
+              "id": "1",
+              "name": {
+                "value": "what is free code camp",
+                "synonyms": [
+                  "about free code camp",
+                  "more about free code camp",
+                  "why was free code camp started",
+                  "tell me about free code camp",
+                  "when did free code camp start",
+                  "who started free code camp"
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "what is your podcast about",
+                "synonyms": [
+                  "podcast",
+                  "tell me me about your podcast",
+                  "do you have a podcast",
+                  "how often is the podcast updated"
+                ]
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "what is question three",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "what is question four",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "what is question five",
+                "synonyms": []
+              }
+            }
+          ]
+        }
+      ],
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -26,6 +79,25 @@
             "most recent medium post",
             "the most recent medium post",
             "medium posts"
+          ]
+        },
+        {
+          "name": "KnowledgeBaseIntent",
+          "slots": [
+            {
+              "name": "question",
+              "type": "questions",
+              "samples": []
+            }
+          ],
+          "samples": [
+            "search knowledge base",
+            "search",
+            "frequently asked questions",
+            "f. a. q.",
+            "knowledge base",
+            "search the knowledge base",
+            "{question}"
           ]
         },
         {

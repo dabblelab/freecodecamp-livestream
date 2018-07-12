@@ -1,0 +1,27 @@
+[
+  {
+      "id": "1",
+      "answer": "Free Code Camp is a place where you can learn to code for free. There are online challenges, youtube videos, Medium posts, and a podcast.",
+      "prompt": "Which would you like to hear more about?"
+  },
+  {
+      "id": "2",
+      "answer": "Our podcast is called the Free Code Camp podcast that you can find on iTunes and it covers stuff you will love.",
+      "prompt": "What other question can I answer for you?"
+  },
+  {
+      "id": "3",
+      "answer": "Question three is the third of five sample questions.",
+      "prompt": "You can also prompt users to ask another question. For example: 'What is question four'"
+  },
+  {
+      "id": "4",
+      "answer": "Question four is the fourth of five sample questions.",
+      "prompt": "You can also prompt users to ask another question. For example: 'What is question five'"
+  },
+  {
+      "id": "5",
+      "answer": "Question five is the fifth of five sample questions.",
+      "prompt": "You can also prompt users to ask another question. For example: 'What is question one'"
+  }
+]

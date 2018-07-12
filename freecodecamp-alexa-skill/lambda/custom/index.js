@@ -3,6 +3,7 @@
 
 const Alexa = require('ask-sdk-core');
 const mediumJSONFeed = require('medium-json-feed');
+const qa = require('./modules/qa.js');
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
@@ -40,6 +41,52 @@ const RecentArticlesIntentHandler = {
       .speak(speechText)
       .reprompt(promptText)
       .withSimpleCard('Articles', speechText)
+      .getResponse();
+  },
+};
+
+const KnowledgeBaseIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'KnowledgeBaseIntent';
+  },
+  async handle(handlerInput) {
+
+    if (handlerInput.requestEnvelope.request.intent.slots.question.resolutions) {
+      let resolution = handlerInput.requestEnvelope.request.intent.slots.question.resolutions.resolutionsPerAuthority[0];
+
+      if (resolution.status.code === "ER_SUCCESS_MATCH") {
+        let id = resolution.values[0].value.id;
+        let speechText = 'Sorry I don\'t know that question';
+        await qa.getQuestionById(id).then(function(data){
+          let answer = data[0].answer;
+          let prompt = data[0].prompt;
+    
+          speechText = `${answer} ${prompt}`;
+    
+        }, function(err){
+          speechText = "There was a problem";
+        });
+  
+        handlerInput.responseBuilder
+        .speak(speechText)
+        .reprompt('Ask another question.');
+  
+      } else {
+        //TODO: capture new questions and send notification
+        let speechText = 'Sorry I don\'t know. I\'ve sent your question to one of my human co-workers who can teach me the answer. Please ask me again tomorrow and hopefully I\'ll have an answer for you then.';
+  
+        handlerInput.responseBuilder
+          .speak(speechText);
+      }
+    } else {
+      //prompt for a question
+      handlerInput.responseBuilder
+      .speak(`Ask me a question like: what is free code camp?`)
+      .reprompt('Ask me a question.');
+    }
+ 
+    return handlerInput.responseBuilder
       .getResponse();
   },
 };
@@ -139,6 +186,7 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     RecentArticlesIntentHandler,
+    KnowledgeBaseIntentHandler,
     HelloIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
