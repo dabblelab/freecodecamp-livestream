@@ -39,3 +39,9 @@ During the [livestream](https://www.youtube.com/watch?v=Z60S9J7TCeU), as our exa
  - Multi-turn dialogs
  - Data persistence / DynamoDB
  - The skill certification process
+
+ ## Resources
+
+  - [Using Dialogs Tutorial Video](https://youtu.be/IsFUdJQVxLs)
+  - [ASK SDK 2.0 Docs](https://ask-sdk-for-nodejs.readthedocs.io/en/latest/index.html)
+  - [Alexa Skills Kit (ASK) SDK for Node.js V2: what's new, what's changed, what's gone](http://www.talkingtocomputers.com/alexa-skills-kit-ask-sdk-v2#template-helpers)
